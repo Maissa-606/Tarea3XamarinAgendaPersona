@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSQLite.Views.ShowPersons">
+
+    <StackLayout>
+
+        <Label Text="Contactos Guardados en su Agenda" HorizontalTextAlignment="Center" TextColor="#A52A2A" FontSize="20"/>
+
+        <ListView x:Name="listPersons" ItemSelected="listPersons_ItemSelected" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ListView.Header>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                </StackLayout>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding code}" x:Name="colCode" Grid.Row="0" Grid.Column="0" TextColor="Black" HorizontalOptions="Center"></Label>
+                            <Label Text="{Binding firstNames}" Grid.Row="0" Grid.Column="1" TextColor="Gray"></Label>
+                            <Label Text="{Binding lastNames}" Grid.Row="0" Grid.Column="2" TextColor="Gray"></Label>
+                            <Label Text="{Binding age}" Grid.Row="0" Grid.Column="3" TextColor="Gray" HorizontalOptions="Center"></Label>
+                            <Label Text="{Binding address}" Grid.Row="0" Grid.Column="4" TextColor="Gray"></Label>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnUpdatePerson" Text="ACTUALIZAR" Clicked="btnUpdatePerson_Clicked" IsVisible="false"></Button>
+        <Button x:Name="btnDeletePerson" Text="ELIMINAR" Clicked="btnDeletePerson_Clicked" IsVisible="false"></Button>
+    </StackLayout>
+</ContentPage>

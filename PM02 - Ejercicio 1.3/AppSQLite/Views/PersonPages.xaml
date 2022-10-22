@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSQLite.Views.PersonPages">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Informacion Personal" HorizontalTextAlignment="Center" TextColor="#A52A2A" FontSize="20"/>
+            
+            <Entry x:Name="txtCode" IsVisible="false"></Entry>
+            <Label Text="Nombre Usuario"></Label>
+            <Entry x:Name="txtFirstnames" Placeholder="Ingrese Sus Nombre"></Entry>
+
+            <Label Text="Apellido Usuario"></Label>
+            <Entry x:Name="txtLastnames" Placeholder="Ingrese Su Apellido"></Entry>
+
+            <Label Text="Edad Usuario"></Label>
+            <Entry x:Name="txtAge" Placeholder="Ingrese Su Edad" Keyboard="Numeric"></Entry>
+
+            <Label Text="Direccion Usuario"></Label>
+            <Entry x:Name="txtAddress" Placeholder="Ingrese Su Direccion"></Entry>
+
+            <Label Text="Correo Usuario"></Label>
+            <Entry x:Name="txtEmail" Placeholder="Ingrese Su Correo" Keyboard="Email"></Entry>
+
+            <Button x:Name="btnSavePerson" Text="Guardar en Agenda" Clicked="btnSavePerson_Clicked"></Button>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

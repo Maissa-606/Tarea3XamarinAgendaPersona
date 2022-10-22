@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSQLite.MainPage">
+
+    <StackLayout Margin="0,35,10,0">
+
+        <Label Text="Tarea 3: Agenda" HorizontalTextAlignment="Center" TextColor="#A52A2A" FontSize="20"/>
+        <Label Text="Maissa Sarmiento" HorizontalTextAlignment="Center" TextColor="#A52A2A" FontSize="20"/>
+
+        <Button HorizontalOptions="Center" VerticalOptions="Center" Text="Agregar Contacto a Agenda" Clicked="Button_Clicked"></Button>
+        <Button x:Name="btnListPersons" HorizontalOptions="Center" VerticalOptions="Center" Text="Ver Agenda" Clicked="btnListPersons_Clicked"></Button>
+    </StackLayout>
+
+</ContentPage>
